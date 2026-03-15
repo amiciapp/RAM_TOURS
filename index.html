@@ -3,89 +3,732 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the world with RAM TOURS. Discover amazing travel destinations and experiences!">
-    <title>RAM TOURS</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>RAM TOURS - Luxury Private Tours from Hurghada | Luxor, Cairo & Red Sea</title>
+    <meta name="description" content="Discover Egypt with your local guide. Premium private tours from Hurghada including Luxor, Cairo Pyramids, desert safari & Red Sea snorkeling. Book on WhatsApp!">
+    <meta name="keywords" content="Hurghada tours, Luxor trip, Cairo pyramids, desert safari, Red Sea snorkeling, private guide Hurghada">
+    <meta name="author" content="RAM TOURS">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="RAM TOURS - Discover Egypt With Your Local Guide">
+    <meta property="og:description" content="Premium private tours from Hurghada. Luxor, Cairo, Desert Safari & Red Sea Snorkeling.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://ramtours.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "RAM TOURS",
+        "description": "Premium private tours from Hurghada, Egypt",
+        "url": "https://ramtours.com",
+        "telephone": "+201224278490",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sheraton Street",
+            "addressLocality": "Hurghada",
+            "addressRegion": "Red Sea",
+            "postalCode": "84611",
+            "addressCountry": "EG"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.2355",
+            "longitude": "33.8132"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "500"
+        }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://ramtours.com">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🐪</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>RAM TOURS</h1>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#tours">Tours</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-emoji">🐪</span>
+                <span class="logo-text">RAM TOURS</span>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#tours" class="nav-link">Tours</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <h2>Your Journey Begins Here</h2>
-        <p>Discover amazing destinations with RAM TOURS.</p>
-        <button>Book Now</button>
-    </section>
-
-    <section id="tours">
-        <h2>Our Tours</h2>
-        <article class="tour-card">
-            <h3>Mountain Adventure</h3>
-            <p>Experience the thrill of the mountains.</p>
-        </article>
-        <article class="tour-card">
-            <h3>Beach Paradise</h3>
-            <p>Relax under the sun on beautiful beaches.</p>
-        </article>
-        <article class="tour-card">
-            <h3>City Escapade</h3>
-            <p>Explore the wonders of the city.</p>
-        </article>
-    </section>
-
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-item">
-            <img src="image1.jpg" alt="Tour Image 1">
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn" aria-label="Select language">🌐 EN</button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button data-lang="en">English</button>
+                    <button data-lang="de">Deutsch</button>
+                    <button data-lang="ru">Русский</button>
+                    <button data-lang="fr">Français</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="es">Español</button>
+                    <button data-lang="nl">Nederlands</button>
+                    <button data-lang="pl">Polski</button>
+                    <button data-lang="cs">Čeština</button>
+                    <button data-lang="ro">Română</button>
+                    <button data-lang="sv">Svenska</button>
+                    <button data-lang="no">Norsk</button>
+                    <button data-lang="da">Dansk</button>
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="tr">Türkçe</button>
+                </div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="image2.jpg" alt="Tour Image 2">
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="https://videos.pexels.com/video-files/5723325/5723325-hd_720_1280_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Egypt With Your Local Guide</h1>
+            <p class="hero-subtitle">Private tours, desert adventures and unforgettable experiences from Hurghada</p>
+            
+            <div class="hero-cta">
+                <a href="#tours" class="btn btn-primary btn-lg">
+                    <span>Explore Tours</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://wa.me/201224278490?text=Hello%20RAM%20TOURS%2C%20I%27d%20like%20to%20book%20a%20tour" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                    <span>Book on WhatsApp</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="image3.jpg" alt="Tour Image 3">
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+            </div>
         </div>
     </section>
 
-    <section id="reviews">
-        <h2>What Our Customers Say</h2>
-        <blockquote>
-            <p>"Amazing experience! Highly recommend RAM TOURS!"</p>
-            <footer>- Happy Traveler</footer>
-        </blockquote>
-    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About RAM TOURS</h2>
+                <p>Your Local Guide to Egypt's Wonders</p>
+            </div>
 
-    <section id="map">
-        <h2>Our Location</h2>
-        <div id="map-container">
-            <!-- Embed map here -->
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Meet Your Local Guide</h3>
+                    <p>Welcome to RAM TOURS! I'm a passionate local guide with 10+ years of experience sharing the magic of Egypt with travelers worldwide. Based in Hurghada on Sheraton Street, I specialize in creating personalized, unforgettable experiences that go beyond typical tourist itineraries.</p>
+                    <p>Whether you seek the mystique of ancient Luxor, the thrill of desert safaris, Red Sea snorkeling, or Cairo's pyramids, I guide you with insider knowledge and authentic stories.</p>
+                    <p>My mission is simple: help you discover the real Egypt, connect with its rich history, and create lifetime memories while ensuring your safety and satisfaction are my top priorities.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=600&fit=crop" alt="Local Guide in Egypt" loading="lazy">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <!-- Tours Section -->
+    <section class="tours" id="tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Tours from Hurghada</h2>
+                <p>Handpicked experiences for every traveler</p>
+            </div>
+
+            <div class="tours-grid">
+                <!-- Tour 1 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=400&h=300&fit=crop" alt="Luxor Temple Tour" loading="lazy">
+                        <span class="tour-badge">Most Popular</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="luxor-trip-from-hurghada.html">Luxor Day Trip</a></h3>
+                        <p>Explore ancient temples of Karnak and Luxor, visit Valley of the Kings</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 12 Hours</span>
+                            <span class="price">$89</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Luxor%20Day%20Trip" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1577637923815-a5e56eb2b8db?w=400&h=300&fit=crop" alt="Cairo Pyramids Tour" loading="lazy">
+                        <span class="tour-badge">Iconic</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="cairo-tour-from-hurghada.html">Cairo Pyramids Day Trip</a></h3>
+                        <p>Great Pyramids, Sphinx and Egyptian Museum in one day</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 14 Hours</span>
+                            <span class="price">$129</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Cairo%20Pyramids" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop" alt="Desert Safari" loading="lazy">
+                        <span class="tour-badge">Adventure</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="desert-safari-hurghada.html">Desert Safari Quad Bike</a></h3>
+                        <p>Thrilling quad bike rides through golden dunes at sunset</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 6 Hours</span>
+                            <span class="price">$75</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Desert%20Safari" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 4 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop" alt="Orange Bay Snorkeling" loading="lazy">
+                        <span class="tour-badge">Water Sports</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="orange-bay-hurghada.html">Orange Bay Island Trip</a></h3>
+                        <p>Crystal clear waters teeming with colorful coral and tropical fish</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 8 Hours</span>
+                            <span class="price">$65</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Orange%20Bay" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 5 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" alt="Paradise Island" loading="lazy">
+                        <span class="tour-badge">Relaxation</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Paradise Island Snorkeling</a></h3>
+                        <p>Pristine beaches, swimming and water activities</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 7 Hours</span>
+                            <span class="price">$59</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Paradise%20Island" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 6 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="Dolphin House" loading="lazy">
+                        <span class="tour-badge">Wildlife</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="dolphin-house-hurghada.html">Dolphin House Snorkeling</a></h3>
+                        <p>Swim with dolphins in their natural habitat</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 9 Hours</span>
+                            <span class="price">$85</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Dolphin%20House" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 7 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" alt="Hurghada City" loading="lazy">
+                        <span class="tour-badge">City Tour</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="hurghada-city-tour.html">Hurghada City Tour</a></h3>
+                        <p>Local markets, marina and hidden gems of Hurghada</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 4 Hours</span>
+                            <span class="price">$45</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Hurghada%20City%20Tour" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 8 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1547036328-c9fa89d128fa?w=400&h=300&fit=crop" alt="Abu Dabbab Turtles" loading="lazy">
+                        <span class="tour-badge">Marine Life</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Abu Dabbab Turtle Snorkeling</a></h3>
+                        <p>Swim alongside ancient sea turtles in protected habitat</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 10 Hours</span>
+                            <span class="price">$95</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Abu%20Dabbab" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 9 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="Giftun Island" loading="lazy">
+                        <span class="tour-badge">Island Tour</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="giftun-island-hurghada.html">Giftun Island Tour</a></h3>
+                        <p>Two islands with pristine beaches and incredible coral reefs</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 8 Hours</span>
+                            <span class="price">$69</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Giftun%20Island" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 10 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop" alt="Bedouin Dinner" loading="lazy">
+                        <span class="tour-badge">Cultural</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Bedouin Desert Dinner</a></h3>
+                        <p>Authentic Bedouin camp, camel ride and traditional feast</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 6 Hours</span>
+                            <span class="price">$65</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Bedouin%20Dinner" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 11 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1552959111-3a2ba8e50d98?w=400&h=300&fit=crop" alt="Water Park" loading="lazy">
+                        <span class="tour-badge">Family Fun</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Makadi Water World Aqua Park</a></h3>
+                        <p>Full day at the best water park with slides and attractions</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 8 Hours</span>
+                            <span class="price">$49</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Water%20Park" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 12 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop" alt="Glass Boat" loading="lazy">
+                        <span class="tour-badge">Unique</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Glass Boat Coral Reef Tour</a></h3>
+                        <p>View vibrant coral reefs from a comfortable glass-bottom boat</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 4 Hours</span>
+                            <span class="price">$55</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Glass%20Boat" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 13 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="Submarine" loading="lazy">
+                        <span class="tour-badge">Exclusive</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Sea Scope Submarine Tour</a></h3>
+                        <p>Explore underwater marine life from a luxury submarine</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 3 Hours</span>
+                            <span class="price">$99</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Submarine%20Tour" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 14 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop" alt="Sunset Safari" loading="lazy">
+                        <span class="tour-badge">Scenic</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Hurghada Sunset Desert Safari</a></h3>
+                        <p>Watch the desert transform as sun sets over golden dunes</p>
+                        <div class="tour-meta">
+                            <span>⏱️ 5 Hours</span>
+                            <span class="price">$59</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Sunset%20Safari" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Tour 15 -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" alt="Airport Transfer" loading="lazy">
+                        <span class="tour-badge">Service</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3><a href="#tours">Hurghada Airport Private Transfer</a></h3>
+                        <p>Comfortable private transfer to/from Hurghada airport</p>
+                        <div class="tour-meta">
+                            <span>⏱️ Flexible</span>
+                            <span class="price">$35</span>
+                        </div>
+                        <a href="https://wa.me/201224278490?text=I%27m%20interested%20in%20Airport%20Transfer" target="_blank" rel="noopener noreferrer" class="btn btn-small">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 RAM TOURS. All rights reserved.</p>
+    <!-- Why Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose RAM TOURS</h2>
+                <p>What makes us the best tour operator in Hurghada</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Local Expert Guide</h3>
+                    <p>10+ years of experience with deep knowledge of Egypt's culture, history and hidden gems</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Premium quality at fair prices with no hidden charges or surprises</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Private Tours</h3>
+                    <p>Personalized experiences tailored to your interests, pace and preferences</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Safe & Comfortable Transport</h3>
+                    <p>Modern air-conditioned vehicles with professional drivers ensure your comfort</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>24/7 WhatsApp Support</h3>
+                    <p>Always available for bookings, questions and support anytime, anywhere</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Proven Track Record</h3>
+                    <p>Hundreds of happy customers with 5-star reviews and repeat bookings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-number" data-count="500">0</div>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="1000">0</div>
+                <p>Tours Completed</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="10">0</div>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="5">0</div>
+                <p>Star Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Moments from our unforgettable adventures</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=400&h=300&fit=crop" alt="Egypt Temple Gallery" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop" alt="Desert Safari Gallery" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop" alt="Red Sea Snorkeling Gallery" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" alt="Hurghada Beach Gallery" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1577637923815-a5e56eb2b8db?w=400&h=300&fit=crop" alt="Cairo Pyramids Gallery" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Coral Reef Gallery" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <p>What travelers say about their experiences with RAM TOURS</p>
+            </div>
+
+            <div class="reviews-carousel">
+                <div class="review-item active">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"The Luxor trip was absolutely incredible! Our guide was so knowledgeable about Egypt's history. Highly recommend!"</p>
+                    <p class="review-author">- Sarah Mitchell, USA</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Best desert safari ever! The sunset was unforgettable and the Bedouin dinner was authentic. Worth every penny!"</p>
+                    <p class="review-author">- James Cooper, UK</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Professional, friendly, and so accommodating. Our snorkeling trip was perfect. The coral reefs were stunning!"</p>
+                    <p class="review-author">- Emma Rodriguez, Spain</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"The Cairo day trip was perfectly organized. We saw the pyramids, sphinx, and museum in one day. Incredible!"</p>
+                    <p class="review-author">- David Thompson, Canada</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Absolutely fantastic! The whole experience was seamless. A true local guide who understands travelers."</p>
+                    <p class="review-author">- Lisa Anderson, Australia</p>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" aria-label="Previous review">❮</button>
+                <button class="carousel-btn" id="nextBtn" aria-label="Next review">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Follow Our Adventures</h2>
+                <p>@ramtours_hurghada on Instagram</p>
+            </div>
+
+            <div class="instagram-grid">
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=300&h=300&fit=crop" alt="Instagram post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=300&h=300&fit=crop" alt="Instagram post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&h=300&fit=crop" alt="Instagram post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop" alt="Instagram post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1577637923815-a5e56eb2b8db?w=300&h=300&fit=crop" alt="Instagram post" loading="lazy"></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop" alt="Instagram post" loading="lazy"></div>
+            </div>
+
+            <a href="https://instagram.com/ramtours_hurghada" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Follow On Instagram</a>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us in Hurghada</h2>
+                <p>Located on Sheraton Street, heart of Hurghada</p>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.7525852295006!2d33.81326!3d27.2355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145c0f8f8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sSheraton%20Street%2C%20Hurghada%2C%20Egypt!5e0!3m2!1sen!2seg!4v1234567890" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="map-info">
+                <div class="info-card">
+                    <h3>📍 Our Location</h3>
+                    <p>Sheraton Street<br>Hurghada, Red Sea, Egypt 84611</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Contact</h3>
+                    <p>Phone: +20 122 4278 490<br>Email: info@ramtours.com</p>
+                </div>
+                <div class="info-card">
+                    <h3>💬 WhatsApp</h3>
+                    <a href="https://wa.me/201224278490" target="_blank" rel="noopener noreferrer" class="btn btn-small">Chat Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We're here to help 24/7!</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm" name="contact">
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <input type="tel" placeholder="Your Phone (WhatsApp)" name="phone">
+                    <select name="tour" required>
+                        <option value="">Select Tour Interest</option>
+                        <option value="luxor">Luxor Day Trip</option>
+                        <option value="cairo">Cairo Pyramids</option>
+                        <option value="desert">Desert Safari</option>
+                        <option value="snorkeling">Red Sea Snorkeling</option>
+                        <option value="other">Other Tour</option>
+                    </select>
+                    <textarea placeholder="Your Message" name="message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <h4>📱 WhatsApp (Recommended)</h4>
+                        <p>Direct messaging for instant booking</p>
+                        <a href="https://wa.me/201224278490" target="_blank" rel="noopener noreferrer" class="contact-link">Chat on WhatsApp →</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>📞 Phone</h4>
+                        <p>+20 122 4278 490</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>✉️ Email</h4>
+                        <p><a href="mailto:info@ramtours.com" class="contact-link">info@ramtours.com</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>🏢 Office Address</h4>
+                        <p>Sheraton Street<br>Hurghada, Red Sea, Egypt 84611</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>⏰ Availability</h4>
+                        <p>Available 24/7 for WhatsApp<br>Office hours: 8:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for Your Egyptian Adventure?</h2>
+            <p>Book your unforgettable tour experience today!</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/201224278490?text=Hello%20RAM%20TOURS%2C%20I%27d%20like%20to%20book%20a%20tour" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Book on WhatsApp</a>
+                <a href="#contact" class="btn btn-secondary btn-lg">Send Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAM TOURS</h4>
+                <p>Discover Egypt with your local guide. Premium private tours from Hurghada including Luxor, Cairo, desert safari and Red Sea snorkeling.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+                    <a href="https://instagram.com/ramtours_hurghada" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+                    <a href="https://wa.me/201224278490" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Popular Tours</h4>
+                <ul>
+                    <li><a href="luxor-trip-from-hurghada.html">Luxor Day Trip</a></li>
+                    <li><a href="desert-safari-hurghada.html">Desert Safari</a></li>
+                    <li><a href="snorkeling-hurghada.html">Red Sea Snorkeling</a></li>
+                    <li><a href="cairo-tour-from-hurghada.html">Cairo Pyramids</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📱 +20 122 4278 490</p>
+                <p>💬 WhatsApp 24/7</p>
+                <p>📧 info@ramtours.com</p>
+                <p>📍 Sheraton Street, Hurghada</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 RAM TOURS. All rights reserved. | Discover Egypt With Your Local Guide</p>
+        </div>
     </footer>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/201224278490?text=Hello%20RAM%20TOURS%2C%20I%27d%20like%20to%20book%20a%20tour" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" id="floatingWhatsApp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
